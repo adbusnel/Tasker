@@ -1,0 +1,8 @@
+<div class="card-container" *ngIf="content">
+  <div class="card-title">
+    <span>{{ content.title }}</span>
+  </div>
+  <div *ngIf="content.status">
+    <app-card-state [status]="content.status" />
+  </div>
+</div>

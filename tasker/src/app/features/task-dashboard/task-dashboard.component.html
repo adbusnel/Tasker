@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <app-card-container
+      title="Pending"
+      [tasks]="groupTasks['pending']"
+      (cardClick)="openModificationDialog($event)"
+      (newTaskClick)="openCreationDialog('pending')"
+    ></app-card-container>
+    <app-card-container
+      title="In Progress"
+      [tasks]="groupTasks['in_progress']"
+      (cardClick)="openModificationDialog($event)"
+      (newTaskClick)="openCreationDialog('in_progress')"
+    ></app-card-container>
+    <app-card-container
+      title="To Test"
+      [tasks]="groupTasks['to_test']"
+      (cardClick)="openModificationDialog($event)"
+      (newTaskClick)="openCreationDialog('to_test')"
+    ></app-card-container>
+    <app-card-container
+      title="Done"
+      [tasks]="groupTasks['done']"
+      (cardClick)="openModificationDialog($event)"
+      (newTaskClick)="openCreationDialog('done')"
+    ></app-card-container>
+  </div>
+</div>

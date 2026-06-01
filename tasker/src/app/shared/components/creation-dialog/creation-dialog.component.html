@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+<mat-dialog-content [formGroup]="form">
+
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-full">
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option [value]="states[0]">Pending</mat-option>
+      <mat-option [value]="states[1]">In Progress</mat-option>
+      <mat-option [value]="states[2]">To Test</mat-option>
+      <mat-option [value]="states[3]">Done</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Cancel</button>
+  <button
+    *ngIf="data.mode === 'edit'"
+    mat-flat-button
+    color="warn"
+    (click)="delete()">
+    Delete
+  </button>
+
+  <button mat-raised-button color="primary"
+          (click)="submit()"
+          [disabled]="form.invalid">
+    {{this.data.mode === 'create' ? 'Create' : 'Update'}}
+  </button>
+</mat-dialog-actions>

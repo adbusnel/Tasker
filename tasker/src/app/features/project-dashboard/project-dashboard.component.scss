@@ -1,0 +1,31 @@
+body {
+  margin-left: 10px;
+  // margin-right: 10px;
+  // padding-right: 10px;
+
+  .project-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .project-list-container {
+    border: 1px black solid;
+    border-radius: 5px;
+    min-height: 35%;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .new-project-btn {
+    background-color: rgb(22, 2, 243);
+    color: white;
+    border-style: hidden;
+    border-radius: 5px;
+    right: 5px;
+    bottom: 5px;
+    position: fixed;
+    cursor: pointer;
+  }
+}

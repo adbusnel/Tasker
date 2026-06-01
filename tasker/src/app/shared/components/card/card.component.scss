@@ -1,0 +1,21 @@
+.card-container {
+  width: 95%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .card-title {
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+.card-container:hover {
+  background-color: #f0f0f0;
+}

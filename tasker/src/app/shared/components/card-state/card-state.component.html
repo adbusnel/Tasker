@@ -1,0 +1,15 @@
+<div
+  class="card-state-container"
+  [style]="this.background"
+  (mouseenter)="showTooltip(true)"
+  (mouseleave)="showTooltip(false)"
+  (mousemove)="onMouseMove($event)"
+>
+  <div
+    class="tooltip"
+    *ngIf="this.show"
+    [style]="{ left: tipX + 'px', top: tipY + 'px' }"
+  >
+    {{this.stateText}}
+  </div>
+</div>

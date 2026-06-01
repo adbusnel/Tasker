@@ -1,0 +1,22 @@
+<body>
+  <div class="project-dashboard-header">
+    <h2>Project Dashboard</h2>
+    <button mat-raised-button color="primary" (click)="openCreationDialog()">
+      New Project
+    </button>
+  </div>
+  <div class="project-list-container" *ngIf="projectsList.length; else noProject">
+    <div *ngFor="let project of projectsList">
+      <app-card
+        [content]="project"
+        (click)="goToTasks(project._id || '')"
+      >
+      </app-card>
+    </div>
+  </div>
+  <ng-template #noProject>
+    <div class="project-list-container no-project">
+      <p>No project for now...</p>
+    </div>
+  </ng-template>
+</body>

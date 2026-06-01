@@ -1,0 +1,7 @@
+<div>
+  <h3>{{ title }}</h3>
+  <div *ngFor="let task of tasks">
+    <app-card [content]="task" (click)="onCardClick(task)"></app-card>
+  </div>
+  <button mat-raised-button color="accent" (click)="newTask()">New Task</button>
+</div>
